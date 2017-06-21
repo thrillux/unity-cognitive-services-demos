@@ -7,9 +7,10 @@ using System.Collections.Generic;
 
 public class ImageToComputerVisionAPI : MonoBehaviour {
 
-    string VISIONKEY = "YOURVISIONKEYHERE"; // replace with your Computer Vision API Key
+    string VISIONKEY = "INSERET KEY HERE"; // replace with your Computer Vision API Key
 
-    string emotionURL = "https://api.projectoxford.ai/vision/v1.0/analyze";
+    string emotionURL = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=tags";
+    //string emotionURL = "https://api.projectoxford.ai/vision/v1.0/analyze";
 
     public string fileName { get; private set; }
     string responseData;

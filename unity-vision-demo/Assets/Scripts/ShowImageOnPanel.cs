@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Windows;
+using System.IO;
 
 public class ShowImageOnPanel : MonoBehaviour {
 
@@ -25,7 +26,7 @@ public class ShowImageOnPanel : MonoBehaviour {
     {
         Texture2D imageTxtr = new Texture2D(2, 2);
         string fileName = gameObject.GetComponent<ImageToComputerVisionAPI>().fileName;
-        byte[] fileData = File.ReadAllBytes(fileName);
+        byte[] fileData = UnityEngine.Windows.File.ReadAllBytes(fileName);
         imageTxtr.LoadImage(fileData);
         ImageFrameObject.GetComponent<Renderer>().material.mainTexture = imageTxtr;
     }

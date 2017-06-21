@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Linq;
 
 /*
  * http://www.opensource.org/licenses/lgpl-2.1.php
@@ -16,7 +17,7 @@ public static partial class JSONTemplates {
 		if(touched.Add(obj)) {
 			JSONObject result = JSONObject.obj;
 			//Fields
-			FieldInfo[] fieldinfo = obj.GetType().GetFields();
+			FieldInfo[] fieldinfo = obj.GetType().GetFields().ToArray();
 			foreach(FieldInfo fi in fieldinfo) {
 				JSONObject val = JSONObject.nullJO;
 				if(!fi.GetValue(obj).Equals(null)) {
