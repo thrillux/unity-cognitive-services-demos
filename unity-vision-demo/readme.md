@@ -10,9 +10,11 @@ If you need instructions for setting up your machine for HoloLens development, c
 
 2. Clone the project to your local machine and open the project in Unity. 
 
-3. Go to Scripts > ImageToComputerVisionAPI and replace the YOURVISIONKEYHERE string with your Computer Vision API key.
+3. Open `Assets\Main.scene` by double clicking
 
-4. Run the application in the editor. Press 'P' to show the image on screen and the space bar to call the API request. The list of categories, as well as the category with the highest match, is printed in the debug console.
+4. Go to Scripts > ImageToComputerVisionAPI and replace the YOURVISIONKEYHERE string with your Computer Vision API key.
+
+5. Run the application in the editor. Press 'P' to show the image on screen and the space bar to call the API request. The list of categories, as well as the category with the highest match, is printed in the debug console.
 
 ## Components
 This demo contains the following components:
